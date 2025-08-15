@@ -1,0 +1,62 @@
+.mi-container {
+  background: linear-gradient(135deg, #004ba0, #ffcc00);
+  padding: 40px;
+  min-height: 80vh;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Banner */
+.mi-banner {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.mi-title {
+  font-size: 48px;
+  font-weight: bold;
+  animation: slideDown 0.8s ease-in-out;
+}
+.mi-subtitle {
+  font-size: 18px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Cards */
+.mi-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.mi-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.8s ease-in-out;
+}
+.mi-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.mi-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
